@@ -88,6 +88,28 @@ En el maestro nunca voy a ver los archivos.
 Para ver cambios de los demás tengo q refrescar el repo maestro y si alguien ha  hech un cambio yo tendré q descargarme la ultima versión antes de poder hacer un push.  Haces un  git pull y te bajas la version que otros han modificado.
 
 
+Actualizar  un fork:
+      Desde dentro de la carpeta del fork en local :
+     - git remote -v
+     - git remote add upstream https://github.com/manuelbarzi/skylab-bootcamp-201709.git ------> la direccion del repo original ( del usuario original, no del mio)
+     - git remote -v -----> 
+     - git fetch upstream--------------> trae los cambios del remoto a la base de datos local.
+       Como ya tienes el upstream a partir de ahora con el fetch se irá actualizando...
+       upstream es el repositorio del dueño aoriginal del fork
+     - git merge upstream/master ---------------->from upstream(manuelbarzi) master to local master ( branch master)
+     - git status
+      -git push
+
+      -------------------------------------------
+
+fetch ---trae los cambios a local pero no los ejecuta
+
+
+
+
+
+
+
 git add + git commit -----> lo meto en mi caja definitivament
 
 en la web: settings-- github-- colaborators, para invitar a alguien a tu github
